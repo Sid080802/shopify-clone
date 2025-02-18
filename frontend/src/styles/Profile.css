@@ -1,0 +1,69 @@
+/* src/pages/profile.css */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Example gradient */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif; /* Adding a clean font */
+  }
+  
+  .profile-welcome {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Added text shadow for better contrast */
+  }
+  
+  .profile-email {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 400;
+    opacity: 0.8; /* Slight transparency for a softer look */
+  }
+  
+  .profile-logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding subtle shadow */
+    transition: background-color 0.3s, transform 0.3s ease-in-out; /* Adding a smooth transition */
+  }
+  
+  .profile-logout-btn:hover {
+    background-color: #e60000;
+    transform: translateY(-2px); /* Slight movement on hover for a more interactive feel */
+  }
+  
+  .profile-logout-btn:active {
+    transform: translateY(1px); /* Subtle active state */
+  }
+  
+  @media (max-width: 768px) {
+    .profile-welcome {
+      font-size: 2rem;
+    }
+  
+    .profile-email {
+      font-size: 1rem;
+    }
+  
+    .profile-logout-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  

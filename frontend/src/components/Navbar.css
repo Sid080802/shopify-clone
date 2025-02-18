@@ -1,0 +1,247 @@
+/* Global styles */
+body {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Logo styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #5c67f2; /* Change color on hover */
+}
+
+.navbar-logo i {
+  margin-right: 10px;
+  color: #5c67f2;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover i {
+  color: #333; /* Change icon color on hover */
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 350px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px; /* Larger padding for better spacing */
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #5c67f2; /* Border color on focus */
+  box-shadow: 0 0 8px rgba(92, 103, 242, 0.5); /* Add glow effect on focus */
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #777;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.search-input:focus + .search-icon {
+  color: #5c67f2; /* Change icon color when input is focused */
+}
+
+/* Navbar Icons */
+.navbar-icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #007bff;
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.navbar-link:hover i {
+  color: #007bff; /* Change icon color on hover */
+}
+
+.cart-count {
+ 
+ color:white;
+  border-radius: 30%;
+  padding: 5px 8px;
+  font-size: 10px;
+  background-color: rgb(40, 136, 173);
+}
+
+/* Navbar.css */
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-link i {
+  margin-right: 5px;
+}
+
+.navbar-link:hover {
+  color: #0072ff;
+  cursor: pointer;
+}
+
+.navbar-icons button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.navbar-icons button:hover {
+  color: #ff4d4d;
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  font-size: 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #0072ff;
+}
+
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-icons {
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-link {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+}
+
+/* Additional Enhancements */
+/* Add a smooth scroll behavior for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a subtle animation for the navbar when it becomes sticky */
+@keyframes stickyNavbar {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar.sticky {
+  animation: stickyNavbar 0.5s ease;
+}
+
+/* Add a gradient background for the navbar on scroll */
+.navbar.scrolled {
+  background: linear-gradient(90deg, #fff, #f8f9fa);
+}
