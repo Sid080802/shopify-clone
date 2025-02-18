@@ -18,7 +18,7 @@ function Login({ loginUser }) { // Receiving loginUser function from App.jsx
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
         { email, password },
         { headers: { 'Content-Type': 'application/json' } }
       );

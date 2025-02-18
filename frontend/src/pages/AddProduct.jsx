@@ -50,7 +50,7 @@ function AddProduct() {
 
     try {
       // Send a POST request to the server to add the product to the database
-      const response = await fetch('http://localhost:5000/api/products', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
