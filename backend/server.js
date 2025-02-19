@@ -12,7 +12,7 @@ const app = express();
 
 // ✅ Allowed frontend origins (update with your frontend URLs)
 const allowedOrigins = [
-  "https://shopify-clone-sand.vercel.app", // Frontend deployed on Vercel
+  "https://shopify-clone-alpha.vercel.app/", // Frontend deployed on Vercel
   "http://localhost:5173", // Local development frontend
 ];
 
