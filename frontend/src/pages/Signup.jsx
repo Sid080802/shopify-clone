@@ -89,7 +89,9 @@ function Signup() {
         </div>
         <button className="submit-button" type="submit">Sign Up</button>
       </form>
-      <p className="login-link">Already have an account? <a href="/login">Login</a></p>
+      <p className="login-link">
+  Already have an account? <span onClick={() => navigate('/login')} style={{ cursor: 'pointer', color: 'blue', textDecoration: 'underline' }}>Login</span>
+</p>
     </div>
     </div>
   );

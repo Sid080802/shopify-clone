@@ -77,7 +77,9 @@ function Login({ loginUser }) { // Receiving loginUser function from App.jsx
         </div>
         <button className="submit-button" type="submit">Login</button>
       </form>
-      <p className="signup-link">Don't have an account? <a href="/signup">Sign up</a></p>
+      <p className="signup-link">
+  Don't have an account? <span onClick={() => navigate('/signup')} style={{ cursor: 'pointer', color: 'blue', textDecoration: 'underline' }}>Sign up</span>
+</p>
     </div>
     </div>
   );
