@@ -16,6 +16,7 @@ const allowedOrigins = [
   "http://localhost:5173", // Local development frontend
 ];
 
+
 // ✅ CORS Configuration
 const corsOptions = {
   origin: (origin, callback) => {
