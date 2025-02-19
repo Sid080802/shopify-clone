@@ -14,7 +14,7 @@ const app = express();
 const corsOptions = {
   origin: [
     'http://localhost:5173',  // Localhost URL for local development
-    'https://shopify-clone-alpha.vercel.app',  // Vercel frontend URL
+    'https://shopify-clone-delta.vercel.app/',  // Vercel frontend URL
   ],
   methods: 'GET,POST,PUT,DELETE', // Allow more methods
   allowedHeaders: 'Content-Type,Authorization',
