@@ -89,7 +89,7 @@ function Signup() {
         </div>
         <button className="submit-button" type="submit">Sign Up</button>
       </form>
-      <p className="login-link">Already have an account? <a href="/login">Login</a></p>
+      <p className="login-link">Already have an account? <a href="/api/auth/login">Login</a></p>
     </div>
     </div>
   );
