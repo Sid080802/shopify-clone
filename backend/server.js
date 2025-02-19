@@ -10,16 +10,22 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 
-// CORS Configuration - Allow frontend app (React) to communicate with this server
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
+
 const corsOptions = {
-  origin: [
-    'http://localhost:5173',  // Localhost URL for local development
-    'https://shopify-clone-eosin-three.vercel.app/', // Vercel frontend URL
-  ],
-  methods: 'GET,POST,PUT,DELETE', // Allow more methods
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
 };
+
 app.use(cors(corsOptions));
+
 
 // Middleware to parse JSON bodies
 app.use(express.json());
